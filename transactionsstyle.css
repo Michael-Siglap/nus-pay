@@ -2,7 +2,7 @@
 
 {}
 
-.body{
+/* .body{
     display:flex;
     flex-direction:column;
     flex: 1;
@@ -13,9 +13,10 @@
     position: relative; 
     overflow: hidden; 
     background-color: rgba(214, 214, 214, 0.8);
-    }
+    } */
     /* width: 222px; height: 720px; position: absolute; left: -1px; top: -1px; border-radius: 30px; background: #fff;} */
     /* width: 220px; height: 40px; position: absolute; left: 15px; top: 101px; border-radius: 10px; background: #1f548c;} */
+    
     
     
 .links{
