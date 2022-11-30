@@ -1,6 +1,8 @@
 @media screen and (max-width: 1025px)
 
-body{
+{}
+
+.body{
     display:flex;
     flex-direction:column;
     flex: 1;
@@ -10,24 +12,24 @@ body{
     -moz-osx-font-smoothing: grayscale;
     position: relative; 
     overflow: hidden; 
-    background: rgba (214, 214, 214, 0.8);
+    background-color: rgba(214, 214, 214, 0.8);
     }
     /* width: 222px; height: 720px; position: absolute; left: -1px; top: -1px; border-radius: 30px; background: #fff;} */
     /* width: 220px; height: 40px; position: absolute; left: 15px; top: 101px; border-radius: 10px; background: #1f548c;} */
     
     
-    .links{
-      width: 222px;
-    height: 720px; 
-    position: absolute;
-    text-align: left;
-    border-radius: 30px;
+.links{
+  width: 222px;
+  height: 720px; 
+  position: absolute;
+  text-align: left;
+  border-radius: 30px;
   font-weight: 700;
   font-size:12px; 
   background: #fff;
 }
 
-a.other_links, a:hover{
+a.other_links{
   width: 222px; 
   height: 720px; 
   text-align: left;  
