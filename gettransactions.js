@@ -1,9 +1,10 @@
 const form = document.getElementById('form');
-const startdate = document.getElementById('startdate');
-const enddate = document.getElementById('enddate');
+
 
 function getDataFromApi(event) {
-let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io"
+  let startdate = document.getElementById('startdate');
+  let enddate = document.getElementById('enddate');
+  let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io"
 
   var settings = {
     "url": `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
