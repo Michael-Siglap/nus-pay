@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "postcss": "^8.4.19",
     "tailwind": "^4.0.0"
   },
