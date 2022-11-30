@@ -1,0 +1,126 @@
+@media screen and (max-width: 1025px)
+
+body{
+    display:flex;
+    flex-direction:column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative; 
+    overflow: hidden; 
+    background: rgba (214, 214, 214, 0.8);
+    }
+    /* width: 222px; height: 720px; position: absolute; left: -1px; top: -1px; border-radius: 30px; background: #fff;} */
+    /* width: 220px; height: 40px; position: absolute; left: 15px; top: 101px; border-radius: 10px; background: #1f548c;} */
+    
+    
+    .links{
+      width: 222px;
+    height: 720px; 
+    position: absolute;
+    text-align: left;
+    border-radius: 30px;
+  font-weight: 700;
+  font-size:12px; 
+  background: #fff;
+}
+
+a.other_links, a:hover{
+  width: 222px; 
+  height: 720px; 
+  text-align: left;  
+  border-radius: 30px;
+  font-weight: 700;
+  font-size:12px; 
+  color:rgba(0,0,0,0.75);
+}
+
+a:link, a:hover {
+  width: 220px; height: 17px; position: absolute; border-radius: 30px; 
+  color: white; background-color: #1f548c;
+}
+
+.transaction_details
+{width: 220px; height: 40px; position: absolute; left: 300px; top: 101px; border-radius: 10px;}
+
+
+/*.h2
+/* {position: absolute; text-align: center; color: black;}
+
+/*.transaction_label
+{width: 220px; height: 40px; position: absolute; left: 15px; top: 101px; border-radius: 10px; background: #1f548c;}
+
+.home_label
+{width: 134px; height: 16px; position: absolute; left: 60px; top: 215px; font-size: 12px; font-weight: 600; text-align: left; color: rgba(0,0,0,0.75);}
+
+
+.budget_label
+{width: 134px; height: 16px; position: absolute; left: 61px; top: 254px; font-size: 12px; font-weight: 600; text-align: left; color: rgba(0,0,0,0.75);}
+
+.promotions_label
+{width: 134px; height: 17px; position: absolute; left: 59px; top: 334px; font-size: 12px; font-weight: 600; text-align: left; color: rgba(0,0,0,0.75);}
+
+.home_icon
+<svg
+width="16"
+height="16"
+viewBox="0 0 16 16"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+style="position: absolute; left: 28px; top: 214px;"
+preserveAspectRatio="xMidYMid meet"
+>
+<path
+  d="M15.9241 6.09C15.9998 5.90723 16.0196 5.7061 15.981 5.51208C15.9424 5.31805 15.847 5.13984 15.7071 5L10.7071 0L9.29312 1.414L12.5861 4.707H0.000115853V6.707H15.0001C15.1979 6.70705 15.3912 6.64846 15.5557 6.53863C15.7202 6.42881 15.8484 6.27269 15.9241 6.09V6.09ZM0.0761161 9.324C0.000411265 9.50677 -0.0193799 9.7079 0.019247 9.90192C0.057874 10.0959 0.153183 10.2742 0.293116 10.414L5.29312 15.414L6.70712 14L3.41412 10.707H16.0001V8.707H1.00012C0.80232 8.70682 0.608922 8.76536 0.444428 8.8752C0.279935 8.98504 0.15175 9.14124 0.0761161 9.324V9.324Z"
+  fill="black"
+  fill-opacity="0.75"
+></path></svg>
+
+#budget_icon
+<svg
+width="20"
+height="14"
+viewBox="0 0 20 14"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+style="position: absolute; left: 26px; top: 254px;"
+preserveAspectRatio="xMidYMid meet">
+<path
+  d="M15.75 8.75V1.75C15.75 0.7875 14.9625 0 14 0H1.75C0.7875 0 0 0.7875 0 1.75V8.75C0 9.7125 0.7875 10.5 1.75 10.5H14C14.9625 10.5 15.75 9.7125 15.75 8.75ZM14 8.75H1.75V1.75H14V8.75ZM7.875 2.625C6.4225 2.625 5.25 3.7975 5.25 5.25C5.25 6.7025 6.4225 7.875 7.875 7.875C9.3275 7.875 10.5 6.7025 10.5 5.25C10.5 3.7975 9.3275 2.625 7.875 2.625ZM19.25 2.625V12.25C19.25 13.2125 18.4625 14 17.5 14H2.625V12.25H17.5V2.625H19.25Z"
+  fill="black"
+  fill-opacity="0.75"
+></path>
+</svg>
+
+#promotions_icon
+<svg
+width="13"
+height="14"
+viewBox="0 0 13 14"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+style="position: absolute; left: 28px; top: 335px;"
+preserveAspectRatio="xMidYMid meet"
+>
+<path
+  d="M9.625 8.75L9.00813 9.36687L10.5744 10.9375H3.5C3.03587 10.9375 2.59075 10.7531 2.26256 10.4249C1.93437 10.0967 1.75 9.65163 1.75 9.1875C1.75 8.72337 1.93437 8.27825 2.26256 7.95006C2.59075 7.62187 3.03587 7.4375 3.5 7.4375H8.75C9.44619 7.4375 10.1139 7.16094 10.6062 6.66866C11.0984 6.17637 11.375 5.50869 11.375 4.8125C11.375 4.11631 11.0984 3.44863 10.6062 2.95634C10.1139 2.46406 9.44619 2.1875 8.75 2.1875H1.67562L3.24187 0.616875L2.625 0L0 2.625L2.625 5.25L3.24187 4.63313L1.67562 3.0625H8.75C9.21413 3.0625 9.65925 3.24687 9.98744 3.57506C10.3156 3.90325 10.5 4.34837 10.5 4.8125C10.5 5.27663 10.3156 5.72175 9.98744 6.04994C9.65925 6.37813 9.21413 6.5625 8.75 6.5625H3.5C2.80381 6.5625 2.13613 6.83906 1.64384 7.33134C1.15156 7.82363 0.875 8.49131 0.875 9.1875C0.875 9.88369 1.15156 10.5514 1.64384 11.0437C2.13613 11.5359 2.80381 11.8125 3.5 11.8125H10.5744L9.00813 13.3831L9.625 14L12.25 11.375L9.625 8.75Z"
+  fill="black"
+></path></svg>
+
+#line
+<svg
+width="164"
+height="1"
+viewBox="0 0 164 1"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+style="position: absolute; left: 27px; top: 387px;"
+preserveAspectRatio="none"
+>
+<line y1="0.5" x2="164" y2="0.5" stroke="black" stroke-opacity="0.5"></line></svg>
+
+
+
+
