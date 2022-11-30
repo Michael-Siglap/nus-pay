@@ -8,7 +8,7 @@ console.log("test")
 
 function getFromServer(e){
   e.preventDefault();
-  var querryStr =  "&custId" + uid.value + "&pwd=" + pass.value;
+  var querryStr =  "https://nusstore.glitch.me/login?custId=" + uid.value + "&pwd=" + pass.value;
   console.log (querryStr);
   //USING FETCH instead of Jquery
   fetch(querryStr)

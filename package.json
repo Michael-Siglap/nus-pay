@@ -1,6 +1,12 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express-openid-connect": "^2.10.0",
+    "mysql": "^2.18.1",
+    "node": "^19.2.0",
+    "nodemon": "^2.0.20",
     "postcss": "^8.4.19",
     "tailwind": "^4.0.0"
   },

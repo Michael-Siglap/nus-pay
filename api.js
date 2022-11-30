@@ -1,5 +1,5 @@
 const express = require("express");
-const data = require("./mock_data");
+// const data = require("./mock_data");
 
 let router = express.Router();
 
