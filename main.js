@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(apis.router);
 
-
+app.use('/static', express.static('public'))
 
 app.listen(3000, (errors) => {
     if (errors) {

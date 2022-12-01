@@ -33,4 +33,13 @@ router.get('/gettransactions.js',function(req,res) {
   res.sendFile(__dirname + '/gettransactions.js');
 });
 
+router.get('/welcome',function(req,res) {
+  res.sendFile(__dirname + '/welcome.html');
+});
+
+router.get('/nuspay',function(req,res) {
+  res.sendFile(__dirname + '/nuspay.html');
+});
+
+
 module.exports = { router };

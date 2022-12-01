@@ -17,8 +17,6 @@ function getDataFromApi(event) {
   };
   
   var myArray = [];
-  console.log("calling API");
-  console.log(settings.url)
   fetch(settings.url)
   .then(r => r.json())
   .then(data => { console.log(data); buildTable(data);} );
