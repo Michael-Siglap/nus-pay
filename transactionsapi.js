@@ -1,40 +1,50 @@
-const { response } = require("express");
-const express = require("express");
-const database = require("./mockdata");
+const mysql = require('mysql');
 
-let router = express.Router();
-
-router.get("/transaction/all", (request, response) => {
- database.connection.query(`select * from transaction`, (errors, results) => {
-  if (errors){
-    console.log(errors);
-    response.status(500).send("Internal Server Error");
-  }else{
-    response.send(results);
-  }
- });
+var con = mysql.createConnection({
+  host: "137.132.92.144",
+  user: "fintechlab",
+  password: "FinTechLab",
+  port: 12865,
+  database: "market"
 });
 
-// router.get("/transaction/transaction_id", (request, response) => {
-//   // 1. make sure user_id is a number
-//   if (isNaN(parseInt(request.query.transaction_id))) {
-//     console.log(
-//       "Invalid transaction_id passed in the request. transaction_id: " + request.query.transaction_id
-//     );
-//     response.status(400).send("Invalid transaction_id passed in the request.");
-//   }
+con.connect(function(err) {
+  if (err) throw err
+});
 
-  // database.connection.query(
-  //   `select * from transaction where id = ${request.query.transaction_id}`,
-  //   (errors,results)=>{
-  //     if (errors){
-  //       console.log(errors);
-  //       response.status(500).send("Internal Server Error");
-  //     }else{
-  //       response.send(results);
-  //     }
-  //   }
-  // );
-  // });
+function getAllTransactions() {
+  con.query("SELECT * FROM transaction;", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    var objs = [];
+    for (var i = 0;i < result.length; i++) {
+        objs.push({row: result[i]});
+    }
+    return JSON.stringify(objs);
+  });
+}
 
-  module.exports = {router};
+function getTransactionsDateTime(start_date, end_date) {
+  return new Promise(function(resolve, reject) {
+    var query = 'SELECT * FROM transaction WHERE transaction_datetime BETWEEN ? AND ?;'
+
+    con.query(query, [start_date, end_date], function (err, result, fields) {
+        if (err) {
+            return reject(err);
+        }
+        var objs = [];
+        for (var i = 0;i < result.length; i++) {
+            objs.push({
+            date: result[i].transaction_datetime,
+            amount: result[i].transaction_amount,
+            quantity: result[i].transaction_quantity,
+            customer_id: result[i].customer_id
+            });
+        }
+        console.log('hello3', objs)
+        resolve(objs);
+    });
+  });
+}
+
+module.exports = {getAllTransactions, getTransactionsDateTime};

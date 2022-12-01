@@ -1,13 +1,12 @@
 const form = document.getElementById('form');
 
-
 function getDataFromApi(event) {
-  let startdate = document.getElementById('startdate');
-  let enddate = document.getElementById('enddate');
-  let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io"
+  let startdate = document.getElementById('startdate').value;
+  let enddate = document.getElementById('enddate').value;
+  let url = "http://localhost:3000"
 
   var settings = {
-    "url": `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
+    "url": `${url}/api/transactions?start=${startdate}&end=${enddate}`,
     "method": "GET",
     "timeout": 0,
     "headers": {
@@ -17,14 +16,13 @@ function getDataFromApi(event) {
   
   var myArray = [];
   console.log("calling API");
-
   $.ajax(settings).done(function (response) {
     myArray = response;
     buildTable(myArray);
     console.log(myArray);
   });
   event.preventDefault();
-
+}
 
 
 function buildTable(data){
@@ -34,9 +32,8 @@ function buildTable(data){
       var row = `<tr>
                       <td>${data[i].date}</td>
                       <td>${data[i].amount}</td>
-                      <td>${data[i].category}</td>
-                      <td>${data[i].description}</td>
-                      <td>${data[i].account}</td>
+                      <td>${data[i].quantity}</td>
+                      <td>${data[i].customer_id}</td>
                 </tr>`
       table.innerHTML += row
 
