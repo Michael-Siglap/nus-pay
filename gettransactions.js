@@ -5,6 +5,8 @@ function getDataFromApi(event) {
   let enddate = document.getElementById('enddate').value;
   let url = "http://localhost:3000"
 
+  console.log(startdate)
+  console.log(enddate)
   var settings = {
     "url": `${url}/api/transactions?start=${startdate}&end=${enddate}`,
     "method": "GET",
@@ -16,18 +18,17 @@ function getDataFromApi(event) {
   
   var myArray = [];
   console.log("calling API");
-  $.ajax(settings).done(function (response) {
-    myArray = response;
-    buildTable(myArray);
-    console.log(myArray);
-  });
+  console.log(settings.url)
+  fetch(settings.url)
+  .then(r => r.json())
+  .then(data => { console.log(data); buildTable(data);} );
   event.preventDefault();
 }
 
 
 function buildTable(data){
   var table = document.getElementById('myTable')
-
+  console.log(data)
   for (var i = 0; i < data.length; i++){
       var row = `<tr>
                       <td>${data[i].date}</td>
